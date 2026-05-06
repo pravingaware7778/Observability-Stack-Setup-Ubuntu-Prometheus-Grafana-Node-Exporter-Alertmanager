@@ -5,20 +5,21 @@
 # Alertmanager Config
     vi alertmanager.yml
 ## alertmanager.yml
-
     global:
       smtp_smarthost: 'smtp.gmail.com:587'
-      smtp_from: 'your-email@gmail.com'
-      smtp_auth_username: 'your-email@gmail.com'
-      smtp_auth_password: 'your-app-password'
+      smtp_from: 'pravingaware7778@gmail.com'
+      smtp_auth_username: 'pravingaware7778@gmail.com'
+      smtp_auth_password: 'kcao vulc iimt ujht'
+      smtp_require_tls: true
 
     route:
       receiver: 'email-alert'
 
     receivers:
-    - name: 'email-alert'
-      email_configs:
-      - to: 'your-email@gmail.com'
+      - name: 'email-alert'
+        email_configs:
+          - to: 'pravingaware7778@gmail.com'
+
 
 # Alertmanager Service
      sudo vi /etc/systemd/system/alertmanager.service
